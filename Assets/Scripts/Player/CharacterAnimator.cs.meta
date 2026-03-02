@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: ee934879ba2c12747b0aa7c24c90d6de
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _inputManager: {instanceID: 0}
+  - _ramCollectedDispatcher: {fileID: 11400000, guid: f5a35c67adf811b4eae9bbce0f5e5fcc, type: 2}
+  - _malusHitDispatcher: {fileID: 11400000, guid: 6f434e8c91fa9c64e861bd399607c875, type: 2}
+  - _healthManager: {instanceID: 0}
+  - _idleSprite: {fileID: -5594710826766682079, guid: 068f975b9cc950e41aac135646c550c3, type: 3}
+  - _moveSprite: {fileID: -2997113233820777761, guid: 068f975b9cc950e41aac135646c550c3, type: 3}
+  - _ramSprite: {fileID: -4625354523041752887, guid: df88d3c9c259fb44ea17c62fe641c523, type: 3}
+  - _hurtSprite: {fileID: -8192675100963859812, guid: df88d3c9c259fb44ea17c62fe641c523, type: 3}
+  - _gameOverSprite: {fileID: -547956214650834392, guid: df88d3c9c259fb44ea17c62fe641c523, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

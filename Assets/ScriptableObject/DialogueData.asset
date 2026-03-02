@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82aa7f827107f445b124b51e875c8f8, type: 3}
+  m_Name: DialogueData
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  Lines:
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "Zalut mon copain, zui trop content que tu zois l\xE0 !"
+  - Character: {fileID: 21300000, guid: b947339f7387f104dbca0f323ffa7b4e, type: 3}
+    Text: "Haha, bah vas-y, tu m\u2019avais promis qu\u2019on allait jouer. Mes parents
+      m\u2019interdisent les jeux "
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "T\u2019inqui\xE8\xE8te. Z\u2019ai trois nouveaux zupers jeux\u2026 et
+      devine quoi."
+  - Character: {fileID: 21300000, guid: b947339f7387f104dbca0f323ffa7b4e, type: 3}
+    Text: Bah je sais pas, dis-moi ?
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "Z\u2019est moi-m\xEAme qui les zai cr\xE9\xE9s, h\xE9h\xE9."
+  - Character: {fileID: 21300000, guid: b947339f7387f104dbca0f323ffa7b4e, type: 3}
+    Text: "S\xC9RIEUSEMENT ?"
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "Ouiii, h\xE9h\xE9."
+  - Character: {fileID: 21300000, guid: b947339f7387f104dbca0f323ffa7b4e, type: 3}
+    Text: "Mais moi je voulais jouer \xE0 des vrais bons jeux l\xE0\u2026 snif."
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "Mais n\u2019importe quoi, ils zont zupers mes jeux !"
+  - Character: {fileID: 21300000, guid: b947339f7387f104dbca0f323ffa7b4e, type: 3}
+    Text: "Mouais\u2026 snif snif."
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "Tu zais quoi ? Zi t\u2019arrives \xE0 me battre sur mes propres jeux,
+      ze te donne ma derni\xE8re conzole. Alors t\u2019arr\xEAtes d\u2019\xEAtre
+      d\xE9zu ou pas ?"
+  - Character: {fileID: 21300000, guid: b947339f7387f104dbca0f323ffa7b4e, type: 3}
+    Text: "Ah ouais ? Ok, tu l\u2019auras voulu !"

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheReturnOfTheRam.unity
     guid: 796fdca1cb6e08d4e98f88732674ede0
+  - enabled: 1
+    path: Assets/Scenes/POPUP.unity
+    guid: f9e91c883a15b41409ec2d15e2038560
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2b3d0dd967d909e4b83cafe74658842e, type: 3}
   m_UseUCBPForAssetBundles: 0

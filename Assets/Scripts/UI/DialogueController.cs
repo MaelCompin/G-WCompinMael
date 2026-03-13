@@ -5,7 +5,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private DialogueData _dialogueData;
     [SerializeField] private DialogueView _dialogueView;
     [SerializeField] private DialogueInputHandler _inputHandler;
-    [SerializeField] private GameObject _playButton;
+    [SerializeField] private GameObject[] _playButtons;
 
     public static bool HasSeenDialogueThisSession = false;
 
@@ -23,12 +23,12 @@ public class DialogueController : MonoBehaviour
         {
             _dialogueActive = false;
             _dialogueView.Hide();
-            _playButton.SetActive(true);
+            SetButtonsActive(true);
             return;
         }
 
         _dialogueActive = true;
-        _playButton.SetActive(false);
+        SetButtonsActive(false);
         _dialogueView.Show(_dialogueData.Lines[_currentIndex]);
     }
 
@@ -48,7 +48,13 @@ public class DialogueController : MonoBehaviour
             _dialogueActive = false;
             HasSeenDialogueThisSession = true;
             _dialogueView.Hide();
-            _playButton.SetActive(true);
+            SetButtonsActive(true);
         }
+    }
+
+    private void SetButtonsActive(bool active)
+    {
+        foreach (GameObject button in _playButtons)
+            if (button != null) button.SetActive(active);
     }
 }

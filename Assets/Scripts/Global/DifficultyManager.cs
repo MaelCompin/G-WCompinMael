@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum DifficultyLevel { Easy, Medium, Hard }
 
-public class DifficultyManager : MonoBehaviour
+public class DifficultyManager : DifficultyManagerBase
 {
     [SerializeField] private float _baseTimeStep = 1f;
 
@@ -20,7 +20,7 @@ public class DifficultyManager : MonoBehaviour
     }
 
     /// <summary>Sets the speed increment per interval based on difficulty.</summary>
-    public void SetDifficulty(DifficultyLevel level)
+    public override void SetDifficulty(DifficultyLevel level)
     {
         _speedIncrement = level switch
         {
@@ -32,7 +32,7 @@ public class DifficultyManager : MonoBehaviour
     }
 
     /// <summary>Starts the difficulty progression. Called by GameStartWindowController.</summary>
-    public void StartGame() => _gameStarted = true;
+    public override void StartGame() => _gameStarted = true;
 
     private void Update()
     {

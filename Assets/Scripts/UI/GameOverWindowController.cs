@@ -6,6 +6,7 @@ public class GameOverWindowController : MonoBehaviour
 {
     [SerializeField] private SO_PlayerDatas _playerDatas;
     [SerializeField] private TMP_InputField _nameInput;
+    [SerializeField] private string _leaderboardKey = "LeaderboardData";
 
     private void OnEnable()
     {
@@ -20,7 +21,7 @@ public class GameOverWindowController : MonoBehaviour
         string playerName = _nameInput.text.Trim();
         if (string.IsNullOrEmpty(playerName)) return;
 
-        LeaderboardRepository.AddEntry(playerName, _playerDatas.Score);
+        LeaderboardRepository.AddEntry(playerName, _playerDatas.Score, _leaderboardKey);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

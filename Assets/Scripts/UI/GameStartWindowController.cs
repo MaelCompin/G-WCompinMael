@@ -4,10 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class GameStartWindowController : MonoBehaviour
 {
-    [SerializeField] private DifficultyManager _difficultyManager;
+    [SerializeField] private DifficultyManagerBase _difficultyManager;
     [SerializeField] private GameObject _window;
     [SerializeField] private Transform _leaderboardContent;
     [SerializeField] private GameObject _entryPrefab;
+    [SerializeField] private string _leaderboardKey = "LeaderboardData";
 
     private void Awake()
     {
@@ -47,7 +48,7 @@ public class GameStartWindowController : MonoBehaviour
         foreach (Transform child in _leaderboardContent)
             Destroy(child.gameObject);
 
-        List<LeaderboardEntry> entries = LeaderboardRepository.GetEntries();
+        List<LeaderboardEntry> entries = LeaderboardRepository.GetEntries(_leaderboardKey);
 
         for (int i = 0; i < entries.Count; i++)
         {

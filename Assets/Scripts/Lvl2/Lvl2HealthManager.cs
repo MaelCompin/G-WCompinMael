@@ -28,9 +28,15 @@ public class Lvl2HealthManager : MonoBehaviour
             TriggerGameOver();
     }
 
-    /// <summary>Called when the player clicks "Install" — immediate game over.</summary>
+    /// <summary>Called when the player clicks "Install" -- immediate game over.</summary>
     public void TriggerGameOver()
     {
+        if (GameAudioManager.Instance != null)
+        {
+            GameAudioManager.Instance.PlayLooseLvl2();
+            GameAudioManager.Instance.StopMusic();
+        }
+
         _popupManager.StopSpawning();
         Time.timeScale = 0f;
         _gameOverPanel.SetActive(true);

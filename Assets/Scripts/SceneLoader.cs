@@ -21,10 +21,20 @@ public class SceneLoader : MonoBehaviour
         _backgroundInitialPos = _background.anchoredPosition;
     }
 
+    /// <summary>Sets the zoom center to a specific RectTransform (called before LoadScene).</summary>
+    public void SetZoomTarget(RectTransform target)
+    {
+        _zoomTarget = target;
+    }
+
     /// <summary>Zooms toward the target point, fades to black, then loads the scene.</summary>
     public void LoadScene(string sceneName)
     {
         if (_isTransitioning) return;
+
+        if (GameAudioManager.Instance != null)
+            GameAudioManager.Instance.PlayClick();
+
         StartCoroutine(TransitionAndLoad(sceneName));
     }
 

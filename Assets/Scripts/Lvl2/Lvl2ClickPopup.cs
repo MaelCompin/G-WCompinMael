@@ -22,6 +22,10 @@ public class Lvl2ClickPopup : Lvl2PopupBase
     {
         _clickCount++;
 
+        // Play escalating click sounds for clicks 1-5
+        if (_clickCount <= 5 && GameAudioManager.Instance != null)
+            GameAudioManager.Instance.PlayClickEscalating(_clickCount);
+
         if (_progressBar != null)
         {
             float progress = Mathf.Clamp01((float)_clickCount / ClicksRequired);

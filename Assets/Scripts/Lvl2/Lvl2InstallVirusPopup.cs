@@ -7,9 +7,21 @@ public class Lvl2InstallVirusPopup : Lvl2PopupBase
 
     private void Awake() => _timeLimit = TimeLimit;
 
-    /// <summary>Called by the "Install" button — triggers an instant game over.</summary>
-    public void OnInstallClick() => TriggerGameOver();
+    /// <summary>Called by the "Install" button -- triggers an instant game over.</summary>
+    public void OnInstallClick()
+    {
+        if (GameAudioManager.Instance != null)
+            GameAudioManager.Instance.PlayClick();
 
-    /// <summary>Called by the "Cancel" button — successfully resolves the popup.</summary>
-    public void OnCancelClick() => Complete(Score);
+        TriggerGameOver();
+    }
+
+    /// <summary>Called by the "Cancel" button -- successfully resolves the popup.</summary>
+    public void OnCancelClick()
+    {
+        if (GameAudioManager.Instance != null)
+            GameAudioManager.Instance.PlayClick();
+
+        Complete(Score);
+    }
 }

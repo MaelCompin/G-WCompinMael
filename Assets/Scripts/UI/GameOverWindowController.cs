@@ -21,6 +21,9 @@ public class GameOverWindowController : MonoBehaviour
         string playerName = _nameInput.text.Trim();
         if (string.IsNullOrEmpty(playerName)) return;
 
+        if (GameAudioManager.Instance != null)
+            GameAudioManager.Instance.PlayClick();
+
         LeaderboardRepository.AddEntry(playerName, _playerDatas.Score, _leaderboardKey);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

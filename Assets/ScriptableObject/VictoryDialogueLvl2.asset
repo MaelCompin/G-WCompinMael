@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82aa7f827107f445b124b51e875c8f8, type: 3}
+  m_Name: VictoryDialogueLvl2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  Lines:
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "Je comprends d'o\xF9 viennent toutes ces pop-ups !! S'IL TE PLA\xCET,
+      AIDE-MOI. Non, je rigole, je te fais marcher. C'\xE9tait bien mon jeu et tu
+      m'as encore battu\u2026"
+  - Character: {fileID: 21300000, guid: b947339f7387f104dbca0f323ffa7b4e, type: 3}
+    Text: "T'inqui\xE8te, on ne peut pas \xEAtre fort \xE0 tout, moi je n'aurais
+      jamais pu cr\xE9er ces jeux."
+  - Character: {fileID: 21300000, guid: 3824985fb57bacf46b1317dcff8cbab6, type: 3}
+    Text: "Ouais, t'as peut-\xEAtre raison\u2026"

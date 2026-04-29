@@ -32,19 +32,32 @@ public class HealthManager : MonoBehaviour
         if (isSeringue)
         {
             _currentLives = Mathf.Min(_currentLives + 1, MaxLives);
+            if (GameAudioManager.Instance != null)
+                GameAudioManager.Instance.PlayHeal();
         }
         else
         {
             _currentLives--;
             _ramCollectedDispatcher.DispatchMissed();
+
+            if (_currentLives <= 0)
+            {
+                // Play only loose sound (not damage) on final hit
+                if (GameAudioManager.Instance != null)
+                {
+                    GameAudioManager.Instance.PlayLoose();
+                    GameAudioManager.Instance.StopMusic();
+                }
+                OnLivesChanged?.Invoke(_currentLives);
+                TriggerGameOver();
+                return;
+            }
+
+            if (GameAudioManager.Instance != null)
+                GameAudioManager.Instance.PlayDamage();
         }
 
         OnLivesChanged?.Invoke(_currentLives);
-
-        if (_currentLives <= 0)
-        {
-            TriggerGameOver();
-        }
     }
 
     /// <summary>

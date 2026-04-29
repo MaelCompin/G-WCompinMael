@@ -36,6 +36,9 @@ public class ScoreManager : MonoBehaviour
         _currentMultiplier += MultiplierIncrement;
         OnScoreChanged?.Invoke(_playerDatas.Score);
         OnMultiplierChanged?.Invoke(_currentMultiplier);
+
+        if (GameAudioManager.Instance != null)
+            GameAudioManager.Instance.PlayRam();
     }
 
     /// <summary>Resets the multiplier to base value when a RAM is missed.</summary>
